@@ -1,0 +1,40 @@
+$keycolor: rgb(253, 148, 192);
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: center / cover no-repeat url(../img/bgimg.jpg) fixed;
+}
+
+main {
+    flex: 2;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem;
+    font: 300 1rem "Roboto", sans-serif;
+    background: rgba(238, 234, 234, 0.7);
+}
+
+p {
+    margin: 1rem;
+}
+
+
+
+section {
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+a:link,
+a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: $keycolor;
+}
