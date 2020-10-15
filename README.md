@@ -12,6 +12,7 @@ This project aims to build a web tool that allows users to run Natural Language 
 * Express
 * Webpack
 * meaningcloud API
+* 
 * Workbox
 
 ## Installation
@@ -64,4 +65,4 @@ Command | Action
 `npm run build-prod` | Build project
 `npm start` | Run project
 
-8. Open browser at http://localhost:8080/
+8. Open browser at http://localhost:8081/
