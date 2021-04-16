@@ -7,10 +7,8 @@ const bodyParser = require('body-parser')
 const fetch = require('node-fetch');
 const mockAPIResponse = require('./mockAPI.js')
 
-// Start up an instance of app
 const app = express()
 
-// Cors allows the browser and server to communicate without any security interruptions
 const cors = require('cors');
 
 app.use(cors());
@@ -36,7 +34,6 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
-// POST Route
 app.post('/api', async function(req, res) {
     userInput = req.body.url;
     console.log(`You entered: ${userInput}`);
@@ -46,19 +43,19 @@ app.post('/api', async function(req, res) {
     const mcData = await response.json()
     console.log(mcData)
     res.send(mcData)
-    /** server sends only specified data to the client with below codes
-     * const projectData = {
-     *  score_tag : mcData.score_tag,
-     *  agreement : mcData.agreement,
-     *  subjectivity : mcData.subjectivity,
-     *  confidence : mcData.confidence,
-     *  irony : mcData.irony
-     * }
-     * res.send(projectData);
-     * */
+
+      const projectData = {
+       score_tag : mcData.score_tag,
+       agreement : mcData.agreement,
+       subjectivity : mcData.subjectivity,
+       confidence : mcData.confidence,
+       irony : mcData.irony
+      }
+      res.send(projectData);
+    
 })
 
-// designates what port the app will listen to for incoming requests
+
 app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
