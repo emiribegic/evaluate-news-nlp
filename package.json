@@ -9,9 +9,9 @@
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mahmoud-Emad-Barakat",
   "license": "ISC",
-  "description": "",
+  "description": "NLP",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
